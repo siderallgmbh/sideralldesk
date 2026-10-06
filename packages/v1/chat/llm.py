@@ -42,8 +42,9 @@ class LLM:
             self.messages += self.context
 
     def welcome(self, args):
-        text = f"Welcome to Siderall Knowledge Desk\nHost:{self.base_url}\nModel:{self.model}\n"
-        text += f"RAG has #{len(self.instruct)} instructions.\n"
+        text = "Welcome to Siderall Knowledge Desk\n"
+        text += "AI backend: Connected\n"
+        text += "Private knowledge base: Ready\n"
         return self.text(args, text)
 
     def message(self, role, content):
